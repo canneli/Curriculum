@@ -25,7 +25,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [language, setLanguage] = useState('pt'); // 'pt' or 'en'
+  const [language, setLanguage] = useState('pt'); // 'pt', 'en' or 'es'
 
   // Traduções / Translations
   const translations = {
@@ -92,7 +92,7 @@ const Portfolio = () => {
         softwares: "Softwares",
         softSkillsTitle: "Habilidades",
         softSkillsList: [
-          "Storytelling Visual", "Ritmo de Edição", "Sound Design", "Color Grading", 
+          "Storytelling Visual", "Ritmo de Edición", "Sound Design", "Color Grading", 
           "Comunicação", "IA Generativa", "Gestão de Prazos", "Roteiro", "Social Media"
         ],
         languagesTitle: "Idiomas",
@@ -190,10 +190,98 @@ const Portfolio = () => {
         linkedin: "LinkedIn"
       },
       footer: "All rights reserved."
+    },
+    es: {
+      nav: {
+        home: "Inicio",
+        about: "Sobre mí",
+        experience: "Experiencia",
+        skills: "Habilidades",
+        contact: "Hable Conmigo",
+        mobileContact: "Contacto"
+      },
+      hero: {
+        available: "Disponible para proyectos",
+        role: "Editor de Video",
+        roleSuffix: "& Narrador Visual",
+        description: "Transformo ideas en bruto en narrativas cautivadoras. Especialista en cortes dinámicos, motion design y retención de audiencia para redes sociales y proyectos institucionales.",
+        resume: "Currículum",
+        portfolio: "Portafolio"
+      },
+      about: {
+        title: "Sobre mí",
+        p1: "¡Hola! Soy Felipe Rodrigues da Fonseca. Como artista multimedia y estudiante de Periodismo, no veo la edición solo como \"juntar videos\", sino como el arte de esculpir el tiempo.",
+        p2: "Desde 2022, me sumergí profundamente en el universo de la postproducción. Este viaje me permitió trabajar en más de 200 proyectos, desarrollando no solo técnica, sino una mirada sensible para el ritmo y la emoción que cada video necesita transmitir.",
+        p3: "Actualmente radicado en Belo Horizonte, combino la base teórica de la comunicación con la práctica intensa del software de edición para crear contenidos que retienen, convierten y emocionan.",
+        stats: {
+          projects: "Proyectos Entregados",
+          years: "Años de Experiencia"
+        },
+        education: {
+          title: "Formación y Educación",
+          degree: "Periodismo",
+          school: "Estácio Floresta",
+          location: "Belo Horizonte, MG (Brasil)"
+        }
+      },
+      experience: {
+        title: "Trayectoria Profesional",
+        jobs: [
+          {
+            id: 1,
+            title: "Editor de Videos",
+            company: "Freelancer",
+            date: "Dic 2022 - Presente",
+            description: "Producción y edición de materiales para diversos segmentos. Más de 100 proyectos entregados con enfoque en narrativa visual y retención.",
+            items: [
+              "Ayuntamiento de Conceição das Alagoas (Carnaval 2023)",
+              "Videos institucionales para Centro Universitario UNIGRANDE",
+              "Edición dinámica para Reels y TikTok (Motion Design)"
+            ]
+          },
+          {
+            id: 2,
+            title: "Gestión y Atención",
+            company: "Sorvetes Recreio",
+            date: "Feb 2017 - Dic 2022",
+            description: "Sólida experiencia en atención al cliente, operaciones de caja y gestión de inventario en empresa familiar. Desarrollo de habilidades interpersonales y resolución de problemas bajo presión.",
+            items: []
+          }
+        ]
+      },
+      skills: {
+        title: "Arsenal Creativo",
+        softwares: "Softwares",
+        softSkillsTitle: "Habilidades Blandas",
+        softSkillsList: [
+          "Storytelling Visual", "Ritmo de Edición", "Diseño Sonoro", "Corrección de Color", 
+          "Comunicación", "IA Generativa", "Gestión del Tiempo", "Guion", "Redes Sociales"
+        ],
+        languagesTitle: "Idiomas",
+        languagesList: [
+          { code: "PT", name: "Portugués", level: "Nativo" },
+          { code: "EN", name: "Inglés", level: "Avanzado (C1)" }
+        ]
+      },
+      contact: {
+        title: "¿Vamos a crear algo cinematográfico?",
+        subtitle: "Estoy disponible para proyectos freelance y nuevas oportunidades. Si buscas una edición que va más allá del corte, ponte en contacto.",
+        email: "Email",
+        whatsapp: "WhatsApp",
+        linkedin: "LinkedIn"
+      },
+      footer: "Todos los derechos reservados."
     }
   };
 
   const t = translations[language];
+
+  // Configuração dos botões de idioma
+  const languageOptions = [
+    { code: 'pt', flag: '🇧🇷', label: 'Português' },
+    { code: 'en', flag: '🇺🇸', label: 'English' },
+    { code: 'es', flag: '🇪🇸', label: 'Español' }
+  ];
 
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -218,10 +306,6 @@ const Portfolio = () => {
         behavior: "smooth"
       });
     }
-  };
-
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'pt' ? 'en' : 'pt');
   };
 
   const NavLink = ({ id, label }) => (
@@ -281,14 +365,23 @@ const Portfolio = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            {/* Language Toggle Button */}
-            <button
-              onClick={toggleLanguage}
-              className="p-2 rounded-lg bg-slate-800/50 border border-slate-700 hover:bg-slate-700/50 transition-colors text-xl leading-none shadow-sm flex items-center justify-center w-10 h-10"
-              title={language === 'pt' ? "Mudar para Inglês" : "Switch to Portuguese"}
-            >
-              {language === 'pt' ? "🇧🇷" : "🇺🇸"}
-            </button>
+            {/* Language Buttons - Desktop */}
+            <div className="flex items-center gap-2 mr-2">
+              {languageOptions.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => setLanguage(lang.code)}
+                  className={`p-2 rounded-lg transition-all text-xl leading-none flex items-center justify-center w-10 h-10 border ${
+                    language === lang.code
+                      ? 'bg-slate-800 border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.3)] scale-110 z-10'
+                      : 'bg-slate-800/30 border-slate-700 hover:bg-slate-700/50 opacity-60 hover:opacity-100 hover:scale-105'
+                  }`}
+                  title={lang.label}
+                >
+                  {lang.flag}
+                </button>
+              ))}
+            </div>
 
             <button 
               onClick={() => scrollToSection('contact')}
@@ -298,16 +391,27 @@ const Portfolio = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-4 md:hidden">
-            <button
-                onClick={toggleLanguage}
-                className="p-2 rounded-lg bg-slate-800/50 border border-slate-700 hover:bg-slate-700/50 transition-colors text-xl leading-none"
-              >
-                {language === 'pt' ? "🇧🇷" : "🇺🇸"}
-            </button>
+          {/* Mobile Menu Controls */}
+          <div className="flex items-center gap-3 md:hidden">
+            {/* Language Buttons - Mobile */}
+            <div className="flex items-center gap-1.5">
+              {languageOptions.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => setLanguage(lang.code)}
+                  className={`p-1.5 rounded-md transition-all text-lg leading-none border ${
+                    language === lang.code
+                      ? 'bg-slate-800 border-blue-500 shadow-sm scale-105'
+                      : 'bg-slate-800/30 border-slate-700 opacity-60'
+                  }`}
+                >
+                  {lang.flag}
+                </button>
+              ))}
+            </div>
+            
             <button 
-              className="p-2 text-slate-300 hover:text-white bg-slate-800/50 rounded-lg backdrop-blur-sm"
+              className="p-2 text-slate-300 hover:text-white bg-slate-800/50 rounded-lg backdrop-blur-sm ml-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -454,7 +558,7 @@ const Portfolio = () => {
                   <strong className="text-white">Felipe Rodrigues da Fonseca</strong>. {t.about.p1.split("Fonseca.")[1] || t.about.p1}
                 </p>
                 <p>
-                  <strong className="text-blue-400 bg-blue-500/10 px-1 rounded">200+ {t.about.stats.projects.split(" ")[0]}</strong>{t.about.p2.split("200 projetos")[1] || t.about.p2.split("200 projects")[1]}
+                  <strong className="text-blue-400 bg-blue-500/10 px-1 rounded">200+ {t.about.stats.projects.split(" ")[0]}</strong>{t.about.p2.split("200 projetos")[1] || t.about.p2.split("200 projects")[1] || t.about.p2.split("200 proyectos")[1]}
                 </p>
                 <p>
                   {t.about.p3}
@@ -624,10 +728,10 @@ const Portfolio = () => {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {t.contact.title.split("cinematográfico")[0]}
+            {t.contact.title.split("cinematográfico")[0].split("cinematic")[0]}
             {language === 'pt' ? <br /> : null}
             <span className="text-blue-400">
-               {language === 'pt' ? "cinematográfico?" : "cinematic?"}
+               {language === 'pt' ? "cinematográfico?" : language === 'es' ? "cinematográfico?" : "cinematic?"}
             </span>
           </h2>
           <p className="text-slate-400 mb-12 text-lg max-w-2xl mx-auto">
