@@ -72,7 +72,6 @@
         const { useState, useEffect } = React;
 
         // --- Componentes de Ícones (Wrapper para Lucide) ---
-        // Como estamos usando CDN, criamos componentes simples que usam as tags SVG do Lucide
         const Icon = ({ name, size = 24, className = "" }) => {
             useEffect(() => {
                 if (window.lucide) window.lucide.createIcons();
@@ -91,27 +90,49 @@
             pt: {
                 nav: { home: "Início", about: "Sobre", experience: "Experiência", skills: "Skills", contact: "Fale Comigo", mobileContact: "Contato" },
                 hero: { available: "Disponível para projetos", role: "Editor de Vídeo", roleSuffix: "& Narrador Visual", description: "Transformo ideias brutas em narrativas envolventes. Especialista em cortes dinâmicos, motion design e retenção de audiência para redes sociais e projetos institucionais.", resume: "Currículo", portfolio: "Portfólio" },
-                about: { title: "Sobre mim", p1: "Olá! Sou Felipe Rodrigues da Fonseca. Como artista multimídia e estudante de Jornalismo, não vejo a edição apenas como \"juntar vídeos\", mas como a arte de esculpir o tempo.", p2: "Desde 2022, mergulhei profundamente no universo da pós-produção. Essa jornada me permitiu trabalhar em mais de 200 projetos, desenvolvendo não apenas técnica, mas um olhar sensível para o ritmo e a emoção que cada vídeo precisa transmitir.", p3: "Atualmente baseado em Belo Horizonte, combino a base teórica da comunicação com a prática intensa dos softwares de edição para criar conteúdos que retêm, convertem e emocionam.", stats: { projects: "Projetos Entregues", years: "Anos de Experiência" }, education: { title: "Formação & Educação", degree: "Jornalismo", school: "Estácio Floresta", location: "Belo Horizonte, MG" } },
+                about: { 
+                    title: "Sobre mim", 
+                    // Texto atualizado conforme solicitado
+                    p1: "Sou Felipe Rodrigues da Fonseca, também conhecido como Felipe Canneli. Sou um artista e compositor em desenvolvimento e estudante de jornalismo, com uma grande paixão pela criação de conteúdo.", 
+                    p2: "Desde 2022, venho me dedicando intensamente ao aprendizado de softwares de edição de áudio, vídeo e imagens para aprimorar minhas habilidades em produção audiovisual. Essa jornada me permitiu trabalhar em mais de 200 projetos, desenvolvendo um olhar criativo para o audiovisual.", 
+                    p3: "Também possuo experiência em gestão comercial e atendimento ao público. Tenho boa facilidade em comunicação em inglês, o que amplia meu acesso a referências, materiais de estudo e colaboração com diferentes públicos, e em breve também terei proficiência em francês, já em processo de aprendizagem.", 
+                    stats: { projects: "Projetos Entregues", years: "Anos de Experiência" }, 
+                    education: { title: "Formação & Educação", degree: "Jornalismo", school: "Estácio Floresta", location: "Belo Horizonte, MG" } 
+                },
                 experience: { title: "Trajetória Profissional", jobs: [ { id: 1, title: "Editor de Vídeos", company: "Freelancer", date: "Dez 2022 - Presente", description: "Produção e edição de materiais para diversos segmentos. Mais de 100 projetos entregues com foco em narrativa visual e retenção.", items: [ "Prefeitura de Conceição das Alagoas (Carnaval 2023)", "Vídeos institucionais para Centro Universitário UNIGRANDE", "Edição dinâmica para Reels e TikTok (Motion Design)" ] }, { id: 2, title: "Gestão e Atendimento", company: "Sorvetes Recreio", date: "Fev 2017 - Dez 2022", description: "Experiência sólida em atendimento ao cliente, operações de caixa e gestão de estoque em empresa familiar. Desenvolvimento de habilidades interpessoais e resolução de problemas sob pressão.", items: [] } ] },
-                skills: { title: "Arsenal Criativo", softwares: "Softwares", softSkillsTitle: "Habilidades", softSkillsList: [ "Storytelling Visual", "Ritmo de Edição", "Sound Design", "Color Grading", "Comunicação", "IA Generativa", "Gestão de Prazos", "Roteiro", "Social Media" ], languagesTitle: "Idiomas", languagesList: [ { code: "PT", name: "Português", level: "Nativo" }, { code: "EN", name: "Inglês", level: "Avançado (C1)" } ] },
+                skills: { title: "Arsenal Criativo", softwares: "Softwares", softSkillsTitle: "Habilidades", softSkillsList: [ "Storytelling Visual", "Ritmo de Edição", "Sound Design", "Color Grading", "Comunicação", "IA Generativa", "Gestão de Prazos", "Roteiro", "Social Media" ], languagesTitle: "Idiomas", languagesList: [ { code: "PT", name: "Português", level: "Nativo" }, { code: "EN", name: "Inglês", level: "Avançado (C1)" }, { code: "FR", name: "Francês", level: "Estudando" } ] },
                 contact: { title: "Vamos criar algo cinematográfico?", subtitle: "Estou disponível para projetos freelance e novas oportunidades. Se você busca uma edição que vai além do corte, entre em contato.", email: "Email", whatsapp: "WhatsApp", linkedin: "LinkedIn" },
                 footer: "Todos os direitos reservados."
             },
             en: {
                 nav: { home: "Home", about: "About", experience: "Experience", skills: "Skills", contact: "Let's Talk", mobileContact: "Contact" },
                 hero: { available: "Available for projects", role: "Video Editor", roleSuffix: "& Visual Storyteller", description: "I transform raw ideas into engaging narratives. Specialist in dynamic cuts, motion design, and audience retention for social media and institutional projects.", resume: "Resume", portfolio: "Portfolio" },
-                about: { title: "About Me", p1: "Hello! I'm Felipe Rodrigues da Fonseca. As a multimedia artist and Journalism student, I don't see editing just as \"joining videos,\" but as the art of sculpting time.", p2: "Since 2022, I have dived deep into the post-production universe. This journey allowed me to work on more than 200 projects, developing not only technique but a sensitive eye for the rhythm and emotion each video needs to convey.", p3: "Currently based in Belo Horizonte, I combine the theoretical basis of communication with intense practice in editing software to create content that retains, converts, and moves people.", stats: { projects: "Projects Delivered", years: "Years of Experience" }, education: { title: "Education", degree: "Journalism", school: "Estácio Floresta", location: "Belo Horizonte, MG (Brazil)" } },
+                about: { 
+                    title: "About Me", 
+                    p1: "I am Felipe Rodrigues da Fonseca, also known as Felipe Canneli. I am a developing artist and composer and a journalism student, with a great passion for content creation.", 
+                    p2: "Since 2022, I have been dedicating myself intensely to learning audio, video, and image editing software to improve my audiovisual production skills. This journey has allowed me to work on over 200 projects, developing a creative eye for audiovisuals.", 
+                    p3: "I also have experience in commercial management and customer service. I communicate easily in English, which expands my access to references, study materials, and collaboration with different audiences, and soon I will also be proficient in French, which is already in the learning process.", 
+                    stats: { projects: "Projects Delivered", years: "Years of Experience" }, 
+                    education: { title: "Education", degree: "Journalism", school: "Estácio Floresta", location: "Belo Horizonte, MG (Brazil)" } 
+                },
                 experience: { title: "Professional Path", jobs: [ { id: 1, title: "Video Editor", company: "Freelancer", date: "Dec 2022 - Present", description: "Production and editing of materials for various segments. Over 100 projects delivered focusing on visual narrative and retention.", items: [ "Conceição das Alagoas City Hall (Carnival 2023)", "Institutional videos for UNIGRANDE University Center", "Dynamic editing for Reels and TikTok (Motion Design)" ] }, { id: 2, title: "Management & Service", company: "Sorvetes Recreio", date: "Feb 2017 - Dec 2022", description: "Solid experience in customer service, cash operations, and stock management in a family business. Development of interpersonal skills and problem-solving under pressure.", items: [] } ] },
-                skills: { title: "Creative Arsenal", softwares: "Softwares", softSkillsTitle: "Soft Skills", softSkillsList: [ "Visual Storytelling", "Editing Rhythm", "Sound Design", "Color Grading", "Communication", "Generative AI", "Time Management", "Scriptwriting", "Social Media" ], languagesTitle: "Languages", languagesList: [ { code: "PT", name: "Portuguese", level: "Native" }, { code: "EN", name: "English", level: "Advanced (C1)" } ] },
+                skills: { title: "Creative Arsenal", softwares: "Softwares", softSkillsTitle: "Soft Skills", softSkillsList: [ "Visual Storytelling", "Editing Rhythm", "Sound Design", "Color Grading", "Communication", "Generative AI", "Time Management", "Scriptwriting", "Social Media" ], languagesTitle: "Languages", languagesList: [ { code: "PT", name: "Portuguese", level: "Native" }, { code: "EN", name: "English", level: "Advanced (C1)" }, { code: "FR", name: "French", level: "Learning" } ] },
                 contact: { title: "Let's create something cinematic?", subtitle: "I am available for freelance projects and new opportunities. If you are looking for an edit that goes beyond the cut, get in touch.", email: "Email", whatsapp: "WhatsApp", linkedin: "LinkedIn" },
                 footer: "All rights reserved."
             },
             es: {
                 nav: { home: "Inicio", about: "Sobre mí", experience: "Experiencia", skills: "Habilidades", contact: "Hable Conmigo", mobileContact: "Contacto" },
                 hero: { available: "Disponible para proyectos", role: "Editor de Video", roleSuffix: "& Narrador Visual", description: "Transformo ideas en bruto en narrativas cautivadoras. Especialista en cortes dinámicos, motion design y retención de audiencia para redes sociales y proyectos institucionales.", resume: "Currículum", portfolio: "Portafolio" },
-                about: { title: "Sobre mí", p1: "¡Hola! Soy Felipe Rodrigues da Fonseca. Como artista multimedia y estudiante de Periodismo, no veo la edición solo como \"juntar videos\", sino como el arte de esculpir el tiempo.", p2: "Desde 2022, me sumergí profundamente en el universo de la postproducción. Este viaje me permitió trabajar en más de 200 proyectos, desarrollando no solo técnica, sino una mirada sensible para el ritmo y la emoción que cada video necesita transmitir.", p3: "Actualmente radicado en Belo Horizonte, combino la base teórica de la comunicación con la práctica intensa del software de edición para crear contenidos que retienen, convierten y emocionan.", stats: { projects: "Proyectos Entregados", years: "Años de Experiencia" }, education: { title: "Formación y Educación", degree: "Periodismo", school: "Estácio Floresta", location: "Belo Horizonte, MG (Brasil)" } },
+                about: { 
+                    title: "Sobre mí", 
+                    p1: "Soy Felipe Rodrigues da Fonseca, también conocido como Felipe Canneli. Soy un artista y compositor en desarrollo y estudiante de periodismo, con una gran pasión por la creación de contenido.", 
+                    p2: "Desde 2022, me he dedicado intensamente al aprendizaje de software de edición de audio, video e imágenes para mejorar mis habilidades en producción audiovisual. Este viaje me permitió trabajar en más de 200 proyectos, desarrollando una mirada creativa para el audiovisual.", 
+                    p3: "También tengo experiencia en gestión comercial y atención al cliente. Tengo facilidad para comunicarme en inglés, lo que amplía mi acceso a referencias, materiales de estudio y colaboración con diferentes públicos, y pronto también tendré competencia en francés, que ya está en proceso de aprendizaje.", 
+                    stats: { projects: "Proyectos Entregados", years: "Años de Experiencia" }, 
+                    education: { title: "Formación y Educación", degree: "Periodismo", school: "Estácio Floresta", location: "Belo Horizonte, MG (Brasil)" } 
+                },
                 experience: { title: "Trayectoria Profesional", jobs: [ { id: 1, title: "Editor de Videos", company: "Freelancer", date: "Dic 2022 - Presente", description: "Producción y edición de materiales para diversos segmentos. Más de 100 proyectos entregados con enfoque en narrativa visual y retención.", items: [ "Ayuntamiento de Conceição das Alagoas (Carnaval 2023)", "Videos institucionales para Centro Universitario UNIGRANDE", "Edición dinámica para Reels y TikTok (Motion Design)" ] }, { id: 2, title: "Gestión y Atención", company: "Sorvetes Recreio", date: "Feb 2017 - Dic 2022", description: "Sólida experiencia en atención al cliente, operaciones de caja y gestión de inventario en empresa familiar. Desarrollo de habilidades interpersonales y resolución de problemas bajo presión.", items: [] } ] },
-                skills: { title: "Arsenal Creativo", softwares: "Softwares", softSkillsTitle: "Habilidades Blandas", softSkillsList: [ "Storytelling Visual", "Ritmo de Edición", "Diseño Sonoro", "Corrección de Color", "Comunicación", "IA Generativa", "Gestión del Tiempo", "Guion", "Redes Sociales" ], languagesTitle: "Idiomas", languagesList: [ { code: "PT", name: "Portugués", level: "Nativo" }, { code: "EN", name: "Inglés", level: "Avanzado (C1)" } ] },
+                skills: { title: "Arsenal Creativo", softwares: "Softwares", softSkillsTitle: "Habilidades Blandas", softSkillsList: [ "Storytelling Visual", "Ritmo de Edición", "Diseño Sonoro", "Corrección de Color", "Comunicación", "IA Generativa", "Gestión del Tiempo", "Guion", "Redes Sociales" ], languagesTitle: "Idiomas", languagesList: [ { code: "PT", name: "Portugués", level: "Nativo" }, { code: "EN", name: "Inglés", level: "Avanzado (C1)" }, { code: "FR", name: "Francés", level: "Estudiando" } ] },
                 contact: { title: "¿Vamos a crear algo cinematográfico?", subtitle: "Estoy disponible para proyectos freelance y nuevas oportunidades. Si buscas una edición que va más allá del corte, ponte en contacto.", email: "Email", whatsapp: "WhatsApp", linkedin: "LinkedIn" },
                 footer: "Todos los derechos reservados."
             }
@@ -338,8 +359,9 @@
                                         {t.about.title}
                                     </h2>
                                     <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
-                                        <p><strong className="text-white">Felipe Rodrigues da Fonseca</strong>. {t.about.p1.split("Fonseca.")[1] || t.about.p1}</p>
-                                        <p><strong className="text-blue-400 bg-blue-500/10 px-1 rounded">200+ {t.about.stats.projects.split(" ")[0]}</strong>{t.about.p2.split("200 projetos")[1] || t.about.p2.split("200 projects")[1] || t.about.p2.split("200 proyectos")[1]}</p>
+                                        {/* Texto atualizado sem splits complexos */}
+                                        <p>{t.about.p1}</p>
+                                        <p>{t.about.p2}</p>
                                         <p>{t.about.p3}</p>
                                     </div>
                                     <div className="mt-10 grid grid-cols-2 gap-4">
@@ -458,7 +480,7 @@
                                     <div className="space-y-6">
                                         {t.skills.languagesList.map((lang) => (
                                             <div key={lang.code} className="flex items-center gap-4 group">
-                                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg border group-hover:scale-110 transition-transform ${lang.code === 'PT' ? 'bg-green-900/20 text-green-400 border-green-500/30' : 'bg-blue-900/20 text-blue-400 border-blue-500/30'}`}>{lang.code}</div>
+                                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg border group-hover:scale-110 transition-transform ${lang.code === 'PT' ? 'bg-green-900/20 text-green-400 border-green-500/30' : lang.code === 'EN' ? 'bg-blue-900/20 text-blue-400 border-blue-500/30' : 'bg-purple-900/20 text-purple-400 border-purple-500/30'}`}>{lang.code}</div>
                                                 <div>
                                                     <h4 className="text-white font-bold">{lang.name}</h4>
                                                     <p className="text-sm text-slate-400">{lang.level}</p>
