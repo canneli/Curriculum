@@ -81,10 +81,12 @@
         };
 
         // Dados de tradução e configuração
+        // CORREÇÃO: Usando URLs de imagens para as bandeiras em vez de emojis para garantir compatibilidade com Windows
         const languageOptions = [
-            { code: 'pt', flag: '🇧🇷', label: 'Português' },
-            { code: 'en', flag: '🇺🇸', label: 'English' },
-            { code: 'es', flag: '🇪🇸', label: 'Español' }
+            { code: 'pt', flagUrl: 'https://flagcdn.com/w40/br.png', label: 'Português (BR)' },
+            { code: 'pt-PT', flagUrl: 'https://flagcdn.com/w40/pt.png', label: 'Português (PT)' },
+            { code: 'en', flagUrl: 'https://flagcdn.com/w40/us.png', label: 'English' },
+            { code: 'es', flagUrl: 'https://flagcdn.com/w40/es.png', label: 'Español' }
         ];
 
         const translations = {
@@ -102,6 +104,22 @@
                 experience: { title: "Trajetória Profissional", jobs: [ { id: 1, title: "Editor de Vídeos", company: "Freelancer", date: "Dez 2022 - Presente", description: "Produção e edição de materiais para diversos segmentos. Mais de 100 projetos entregues com foco em narrativa visual e retenção.", items: [ "Prefeitura de Conceição das Alagoas (Carnaval 2023)", "Vídeos institucionais para Centro Universitário UNIGRANDE", "Edição dinâmica para Reels e TikTok (Motion Design)" ] }, { id: 2, title: "Gestão e Atendimento", company: "Sorvetes Recreio", date: "Fev 2017 - Dez 2022", description: "Experiência sólida em atendimento ao cliente, operações de caixa e gestão de estoque em empresa familiar. Desenvolvimento de habilidades interpessoais e resolução de problemas sob pressão.", items: [] } ] },
                 skills: { title: "Arsenal Criativo", softwares: "Softwares", softSkillsTitle: "Habilidades", softSkillsList: [ "Storytelling Visual", "Ritmo de Edição", "Sound Design", "Color Grading", "Comunicação", "IA Generativa", "Gestão de Prazos", "Roteiro", "Social Media" ], languagesTitle: "Idiomas", languagesList: [ { code: "PT", name: "Português", level: "Nativo" }, { code: "EN", name: "Inglês", level: "Avançado (C1)" }, { code: "FR", name: "Francês", level: "Estudando" } ] },
                 contact: { title: "Vamos criar algo cinematográfico?", subtitle: "Estou disponível para projetos freelance e novas oportunidades. Se você busca uma edição que vai além do corte, entre em contato.", email: "Email", whatsapp: "WhatsApp", linkedin: "LinkedIn" },
+                footer: "Todos os direitos reservados."
+            },
+            'pt-PT': { // Estrutura duplicada para PT-PT
+                nav: { home: "Início", about: "Sobre", experience: "Experiência", skills: "Skills", contact: "Fale Comigo", mobileContact: "Contacto" },
+                hero: { available: "Disponível para projetos", role: "Editor de Vídeo", roleSuffix: "& Narrador Visual", description: "Transformo ideias brutas em narrativas envolventes. Especialista em cortes dinâmicos, motion design e retenção de audiência para redes sociais e projetos institucionais.", resume: "Currículo", portfolio: "Portfólio" },
+                about: { 
+                    title: "Sobre mim", 
+                    p1: "Sou Felipe Rodrigues da Fonseca, também conhecido como Felipe Canneli. Sou um artista e compositor em desenvolvimento e estudante de jornalismo, com uma grande paixão pela criação de conteúdo.", 
+                    p2: "Desde 2022, venho me dedicando intensamente à aprendizagem de softwares de edição de áudio, vídeo e imagens para aprimorar as minhas competências em produção audiovisual. Esta jornada permitiu-me trabalhar em mais de 200 projetos, desenvolvendo um olhar criativo para o audiovisual.", 
+                    p3: "Também possuo experiência em gestão comercial e atendimento ao público. Tenho boa facilidade em comunicação em inglês, o que amplia o meu acesso a referências, materiais de estudo e colaboração com diferentes públicos, e em breve também terei proficiência em francês, já em processo de aprendizagem.", 
+                    stats: { projects: "Projetos Entregues", years: "Anos de Experiência" }, 
+                    education: { title: "Formação & Educação", degree: "Jornalismo", school: "Estácio Floresta", location: "Belo Horizonte, MG (Brasil)" } 
+                },
+                experience: { title: "Trajetória Profissional", jobs: [ { id: 1, title: "Editor de Vídeos", company: "Freelancer", date: "Dez 2022 - Presente", description: "Produção e edição de materiais para diversos segmentos. Mais de 100 projetos entregues com foco em narrativa visual e retenção.", items: [ "Prefeitura de Conceição das Alagoas (Carnaval 2023)", "Vídeos institucionais para Centro Universitário UNIGRANDE", "Edição dinâmica para Reels e TikTok (Motion Design)" ] }, { id: 2, title: "Gestão e Atendimento", company: "Sorvetes Recreio", date: "Fev 2017 - Dez 2022", description: "Experiência sólida em atendimento ao cliente, operações de caixa e gestão de stock em empresa familiar. Desenvolvimento de competências interpessoais e resolução de problemas sob pressão.", items: [] } ] },
+                skills: { title: "Arsenal Criativo", softwares: "Softwares", softSkillsTitle: "Competências", softSkillsList: [ "Storytelling Visual", "Ritmo de Edição", "Sound Design", "Color Grading", "Comunicação", "IA Generativa", "Gestão de Prazos", "Roteiro", "Social Media" ], languagesTitle: "Idiomas", languagesList: [ { code: "PT", name: "Português", level: "Nativo" }, { code: "EN", name: "Inglês", level: "Avançado (C1)" }, { code: "FR", name: "Francês", level: "Estudando" } ] },
+                contact: { title: "Vamos criar algo cinematográfico?", subtitle: "Estou disponível para projetos freelance e novas oportunidades. Se procura uma edição que vai além do corte, entre em contacto.", email: "Email", whatsapp: "WhatsApp", linkedin: "LinkedIn" },
                 footer: "Todos os direitos reservados."
             },
             en: {
@@ -125,7 +143,7 @@
                 hero: { available: "Disponible para proyectos", role: "Editor de Video", roleSuffix: "& Narrador Visual", description: "Transformo ideas en bruto en narrativas cautivadoras. Especialista en cortes dinámicos, motion design y retención de audiencia para redes sociales y proyectos institucionales.", resume: "Currículum", portfolio: "Portafolio" },
                 about: { 
                     title: "Sobre mí", 
-                    p1: "Soy Felipe Rodrigues da Fonseca, también conocido como Felipe Canneli. Soy un artista y compositor en desarrollo y estudiante de periodismo, con una gran pasión por la creación de contenido.", 
+                    p1: "Soy Felipe Rodrigues da Fonseca, también conocido como Felipe Canneli. Soy un artista e compositor en desarrollo y estudiante de periodismo, con una gran pasión por la creación de contenido.", 
                     p2: "Desde 2022, me he dedicado intensamente al aprendizaje de software de edición de audio, video e imágenes para mejorar mis habilidades en producción audiovisual. Este viaje me permitió trabajar en más de 200 proyectos, desarrollando una mirada creativa para el audiovisual.", 
                     p3: "También tengo experiencia en gestión comercial y atención al cliente. Tengo facilidad para comunicarme en inglés, lo que amplía mi acceso a referencias, materiales de estudio y colaboración con diferentes públicos, y pronto también tendré competencia en francés, que ya está en proceso de aprendizaje.", 
                     stats: { projects: "Proyectos Entregados", years: "Años de Experiencia" }, 
@@ -219,10 +237,10 @@
                                         <button
                                             key={lang.code}
                                             onClick={() => setLanguage(lang.code)}
-                                            className={`p-2 rounded-lg transition-all text-xl leading-none flex items-center justify-center w-10 h-10 border ${language === lang.code ? 'bg-slate-800 border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.3)] scale-110 z-10' : 'bg-slate-800/30 border-slate-700 hover:bg-slate-700/50 opacity-60 hover:opacity-100 hover:scale-105'}`}
+                                            className={`p-1.5 rounded-lg transition-all flex items-center justify-center w-10 h-8 overflow-hidden border ${language === lang.code ? 'bg-slate-800 border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.3)] scale-110 z-10' : 'bg-slate-800/30 border-slate-700 hover:bg-slate-700/50 opacity-60 hover:opacity-100 hover:scale-105'}`}
                                             title={lang.label}
                                         >
-                                            {lang.flag}
+                                            <img src={lang.flagUrl} alt={lang.label} className="w-full h-full object-cover" />
                                         </button>
                                     ))}
                                 </div>
@@ -238,9 +256,9 @@
                                         <button
                                             key={lang.code}
                                             onClick={() => setLanguage(lang.code)}
-                                            className={`p-1.5 rounded-md transition-all text-lg leading-none border ${language === lang.code ? 'bg-slate-800 border-blue-500 shadow-sm scale-105' : 'bg-slate-800/30 border-slate-700 opacity-60'}`}
+                                            className={`p-1 rounded-md transition-all border w-8 h-6 overflow-hidden flex items-center justify-center ${language === lang.code ? 'bg-slate-800 border-blue-500 shadow-sm scale-105' : 'bg-slate-800/30 border-slate-700 opacity-60'}`}
                                         >
-                                            {lang.flag}
+                                            <img src={lang.flagUrl} alt={lang.label} className="w-full h-full object-cover" />
                                         </button>
                                     ))}
                                 </div>
@@ -518,9 +536,9 @@
                         <div className="max-w-4xl mx-auto text-center relative z-10">
                             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                                 {t.contact.title.split("cinematográfico")[0].split("cinematic")[0]}
-                                {language === 'pt' ? <br /> : null}
+                                {language === 'pt' || language === 'pt-PT' ? <br /> : null}
                                 <span className="text-blue-400">
-                                    {language === 'pt' ? "cinematográfico?" : language === 'es' ? "cinematográfico?" : "cinematic?"}
+                                    {language === 'pt' || language === 'pt-PT' ? "cinematográfico?" : language === 'es' ? "cinematográfico?" : "cinematic?"}
                                 </span>
                             </h2>
                             <p className="text-slate-400 mb-12 text-lg max-w-2xl mx-auto">{t.contact.subtitle}</p>
