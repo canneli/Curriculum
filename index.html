@@ -149,8 +149,35 @@
             { code: 'pt', flagUrl: 'https://flagcdn.com/w40/br.png', label: 'Português (BR)' },
             { code: 'pt-PT', flagUrl: 'https://flagcdn.com/w40/pt.png', label: 'Português (PT)' },
             { code: 'en', flagUrl: 'https://flagcdn.com/w40/us.png', label: 'English' },
-            { code: 'es', flagUrl: 'https://flagcdn.com/w40/es.png', label: 'Español' }
+            { code: 'es', flagUrl: 'https://flagcdn.com/w40/es.png', label: 'Español' },
+            { code: 'it', flagUrl: 'https://flagcdn.com/w40/it.png', label: 'Italiano' }
         ];
+
+        // Lógica de Detecção de Idioma
+        const getInitialLanguage = () => {
+            // 1. Verifica se o usuário salvou uma preferência
+            const savedLang = localStorage.getItem('siteLang');
+            if (savedLang && ['pt', 'pt-PT', 'en', 'es', 'it'].includes(savedLang)) {
+                return savedLang;
+            }
+
+            // 2. Verifica o idioma do navegador
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            if (browserLang) {
+                const lowerLang = browserLang.toLowerCase();
+                
+                if (lowerLang.startsWith('pt')) {
+                    return lowerLang.includes('pt') && lowerLang !== 'pt-br' ? 'pt-PT' : 'pt';
+                }
+                if (lowerLang.startsWith('en')) return 'en';
+                if (lowerLang.startsWith('es')) return 'es';
+                if (lowerLang.startsWith('it')) return 'it';
+            }
+
+            // 3. Padrão
+            return 'pt';
+        };
 
         const translations = {
             pt: {
@@ -247,6 +274,30 @@
                     message: "Estás siendo redirigido a la galería de videos completa en una nueva página. ¿Deseas continuar?",
                     confirm: "Sí, Acceder",
                     cancel: "No, Volver"
+                }
+            },
+            it: {
+                toggleCV: "Modalità CV (Formale)",
+                toggleVisual: "Modalità Interattiva",
+                nav: { home: "Inizio", about: "Chi Sono", experience: "Esperienza", skills: "Competenze", contact: "Contattami", mobileContact: "Contatto" },
+                hero: { available: "Disponibile per progetti", role: "Video Editor", roleSuffix: "& Visual Storyteller", description: "Trasformo idee grezze in narrazioni coinvolgenti. Specialista in tagli dinamici, motion design e fidelizzazione del pubblico per i social media e progetti istituzionali.", resume: "Curriculum", portfolio: "Portfolio" },
+                about: { 
+                    title: "Chi Sono", 
+                    p1: "Sono Felipe Rodrigues da Fonseca, conosciuto anche come Felipe Canneli. Sono un artista e compositore in via di sviluppo e studente di giornalismo, con una grande passione per la creazione di contenuti.", 
+                    p2: "Dal 2022, mi sono dedicato intensamente all'apprendimento di software di editing audio, video e immagini per migliorare le mie competenze nella produzione audiovisiva. Questo percorso mi ha permesso di lavorare su oltre 200 progetti, sviluppando un occhio creativo per l'audiovisivo.", 
+                    p3: "Ho anche esperienza nella gestione commerciale e nel servizio clienti. Ho una buona facilità di comunicazione in inglese, il che amplia il mio accesso a riferimenti, materiali di studio e collaborazione con diversi pubblici, e presto sarò competente anche in francese, che è già in fase di apprendimento.", 
+                    stats: { projects: "Progetti Consegnati", years: "Anni di Esperienza" }, 
+                    education: { title: "Formazione & Istruzione", degree: "Giornalismo", school: "Estácio Floresta", location: "Belo Horizonte, MG (Brasile)" } 
+                },
+                experience: { title: "Percorso Professionale", jobs: [ { id: 1, title: "Video Editor", company: "Freelancer", date: "Dic 2022 - Presente", description: "Produzione e montaggio di materiali per vari segmenti. Oltre 100 progetti consegnati con focus sulla narrazione visiva e fidelizzazione.", items: [ "Comune di Conceição das Alagoas (Carnevale 2023)", "Video istituzionali per Centro Universitario UNIGRANDE", "Montaggio dinamico per Reels e TikTok (Motion Design)" ] }, { id: 2, title: "Gestione e Servizio Clienti", company: "Sorvetes Recreio", date: "Feb 2017 - Dic 2022", description: "Solida esperienza nel servizio clienti, operazioni di cassa e gestione del magazzino in un'azienda familiare. Sviluppo di competenze interpersonali e risoluzione dei problemi sotto pressione.", items: [] } ] },
+                skills: { title: "Arsenale Creativo", softwares: "Software", softSkillsTitle: "Competenze Trasversali", softSkillsList: [ "Visual Storytelling", "Ritmo di Montaggio", "Sound Design", "Color Grading", "Comunicazione", "IA Generativa", "Gestione del Tempo", "Sceneggiatura", "Social Media" ], languagesTitle: "Lingue", languagesList: [ { code: "PT", name: "Portoghese", level: "Madrelingua" }, { code: "EN", name: "Inglese", level: "Avanzato (C1)" }, { code: "FR", name: "Francese", level: "In studio" } ] },
+                contact: { title: "Creiamo qualcosa di cinematografico?", subtitle: "Sono disponibile per progetti freelance e nuove opportunità. Se cerchi un montaggio che vada oltre il semplice taglio, contattami.", email: "Email", whatsapp: "WhatsApp", linkedin: "LinkedIn" },
+                footer: "Tutti i diritti riservati.",
+                redirectModal: {
+                    title: "Accedi al Portfolio Esterno",
+                    message: "Stai per essere reindirizzato alla galleria video completa su una nuova pagina. Vuoi continuare?",
+                    confirm: "Sì, Accedi",
+                    cancel: "No, Torna Indietro"
                 }
             }
         };
@@ -379,10 +430,15 @@
             const [activeSection, setActiveSection] = useState('home');
             const [isMenuOpen, setIsMenuOpen] = useState(false);
             const [scrolled, setScrolled] = useState(false);
-            const [language, setLanguage] = useState('pt');
+            const [language, setLanguage] = useState(getInitialLanguage); // Inicializa com a função de detecção
             const [isRedirectModalOpen, setIsRedirectModalOpen] = useState(false);
             const [viewMode, setViewMode] = useState('interactive'); // 'interactive' or 'cv'
             const t = translations[language];
+
+            // Salva a preferência sempre que o idioma mudar
+            useEffect(() => {
+                localStorage.setItem('siteLang', language);
+            }, [language]);
 
             useEffect(() => {
                 const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -443,13 +499,13 @@
                             </div>
                             <div className="flex gap-4">
                                 <button onClick={() => window.print()} className="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded text-sm flex items-center gap-2">
-                                    <Icon name="printer" size={16} /> Imprimir / PDF
+                                    <Icon name="printer" size={16} /> <span className="hidden sm:inline">Imprimir / PDF</span>
                                 </button>
                                 <button 
                                     onClick={() => setViewMode('interactive')} 
                                     className="bg-brand-600 hover:bg-brand-500 px-4 py-2 rounded text-sm font-bold flex items-center gap-2 shadow-lg shadow-brand-600/30"
                                 >
-                                    <Icon name="sparkles" size={16} /> {t.toggleVisual}
+                                    <Icon name="sparkles" size={16} /> <span className="hidden sm:inline">{t.toggleVisual}</span>
                                 </button>
                             </div>
                         </div>
