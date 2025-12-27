@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Felipe Canneli - Editor de Vídeo e Visual Storyteller">
     
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23818cf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z'/%3E%3Ccircle cx='12' cy='13' r='3'/%3E%3C/svg%3E">
 
     <title>Felipe Canneli | Visual Storyteller</title>
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;500;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
@@ -64,6 +68,7 @@
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
                         'scale-in': 'scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'fade-in-down': 'fadeInDown 0.3s ease-out forwards',
                     },
                     keyframes: {
                         blob: {
@@ -87,6 +92,10 @@
                         scaleIn: {
                             '0%': { transform: 'scale(0.9)', opacity: '0' },
                             '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
                 }
@@ -94,6 +103,7 @@
         }
     </script>
 
+    <!-- React & Babel -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -198,7 +208,103 @@
                 },
                 experience: { title: "Linha do Tempo", subtitle: "Minha trajetória na timeline de edição" },
                 skills: { title: "Arsenal Criativo", tech: "Softwares", soft: "Habilidades" },
-                contact: { title: "Vamos criar?", subtitle: "Seu projeto merece uma edição cinematográfica.", btn: "Iniciar Conversa" }
+                contact: { title: "Vamos criar?", subtitle: "Seu projeto merece uma edição cinematográfica.", btn: "Iniciar Conversa" },
+                cv: {
+                    summaryTitle: "Resumo",
+                    summaryText: "Sou um artista e compositor em desenvolvimento e estudante de jornalismo, com uma grande paixão pela criação de conteúdo. Desde 2022, venho me dedicando intensamente ao aprendizado de softwares de edição de áudio, vídeo e imagens para aprimorar minhas habilidades em produção audiovisual. Essa jornada me permitiu trabalhar em mais de 200 projetos, desenvolvendo um olhar criativo para o audiovisual.",
+                    experienceTitle: "Experiência Profissional",
+                    job1: {
+                        title: "Editor de Vídeos Freelancer",
+                        date: "Dez 2022 - Presente",
+                        location: "Projetos Diversos & Remoto",
+                        description: "Atuo com edição de vídeo desde 2022 em projetos institucionais, comerciais e redes sociais. Mais de 200 projetos entregues.",
+                        clientsTitle: "Principais Clientes & Projetos:",
+                        clients: [
+                            "Prefeitura de Conceição das Alagoas: Edição de vídeos oficiais do Carnaval 2023.",
+                            "Centro Universitário UNIGRANDE: Vídeos institucionais e conteúdos acadêmicos.",
+                            "CAESB: Edição de materiais informativos e institucionais.",
+                            "Jurídico: Criação de conteúdo para advogado especialista em direito público.",
+                            "Marketing & Estética: Vídeos comerciais, campanhas digitais e conteúdos promocionais.",
+                            "Redes Sociais: Edição de alta retenção (Reels/TikTok) com motion design, cortes dinâmicos e legendas."
+                        ]
+                    },
+                    job2: {
+                        title: "Gestão e Atendimento",
+                        date: "Fev 2017 - Dez 2022",
+                        location: "Sorvetes Recreio | Belo Horizonte",
+                        description: "Atuação direta na gestão operacional e atendimento ao cliente por 6 anos. Responsável pela preparação de produtos, operação de caixa, organização da loja e gestão de estoque. Desenvolvimento de fortes habilidades de trabalho em equipe, comunicação e resolução de problemas sob pressão."
+                    },
+                    educationTitle: "Educação",
+                    education: {
+                        course: "Jornalismo e Comunicação",
+                        school: "Estácio Floresta",
+                        date: "2022 - Atual (Graduação)"
+                    },
+                    skillsTitle: "Competências",
+                    skillsList: ["Storytelling Audiovisual", "Comunicação Eficaz", "Aprendizagem Rápida", "Adaptabilidade Tecnológica", "Inteligência Artificial (Uso & Ferramentas)", "Referências Midiáticas"],
+                    softwaresTitle: "Softwares",
+                    languagesTitle: "Idiomas",
+                    languagesList: [
+                        { name: "Português", level: "Nativo" },
+                        { name: "Inglês", level: "Avançado" },
+                        { name: "Francês", level: "Básico (Em aprendizado)" }
+                    ]
+                }
+            },
+            'pt-pt': {
+                toggleCV: "Modo Currículo",
+                toggleVisual: "Modo Interativo",
+                nav: { home: "Início", about: "Sobre", experience: "Experiência", skills: "Skills", contact: "Contacto" },
+                hero: { available: "Disponível para projetos", role: "Editor de Vídeo", roleSuffix: "Visual Storyteller", description: "Transformo brutos em narrativas de alto impacto. Foco em ritmo visual, motion design e retenção de audiência para a era digital.", cta: "Ver Portefólio", cv: "Descarregar CV" },
+                about: { 
+                    title: "Quem é o Felipe?", 
+                    bio: "Olá, sou o Felipe Rodrigues da Fonseca (Felipe Canneli). Mais do que um editor, sou um compositor visual. Com background em jornalismo e uma paixão obsessiva por ritmo e narrativa, transformo horas de filmagem em minutos de pura atenção.",
+                    stats: [ { val: "200+", label: "Projetos" }, { val: "3", label: "Anos Exp." }, { val: "100%", label: "Retenção" } ]
+                },
+                experience: { title: "Linha do Tempo", subtitle: "O meu percurso na timeline de edição" },
+                skills: { title: "Arsenal Criativo", tech: "Softwares", soft: "Competências" },
+                contact: { title: "Vamos criar?", subtitle: "O seu projeto merece uma edição cinematográfica.", btn: "Iniciar Conversa" },
+                cv: {
+                    summaryTitle: "Resumo",
+                    summaryText: "Sou um artista e compositor em desenvolvimento e estudante de jornalismo, com uma grande paixão pela criação de conteúdo. Desde 2022, dedico-me intensamente à aprendizagem de softwares de edição de áudio, vídeo e imagens para aprimorar as minhas competências em produção audiovisual. Esta jornada permitiu-me trabalhar em mais de 200 projetos.",
+                    experienceTitle: "Experiência Profissional",
+                    job1: {
+                        title: "Editor de Vídeos Freelancer",
+                        date: "Dez 2022 - Presente",
+                        location: "Projetos Diversos & Remoto",
+                        description: "Atuo com edição de vídeo desde 2022 em projetos institucionais, comerciais e redes sociais. Mais de 200 projetos entregues.",
+                        clientsTitle: "Principais Clientes & Projetos:",
+                        clients: [
+                            "Prefeitura de Conceição das Alagoas: Edição de vídeos oficiais do Carnaval 2023.",
+                            "Centro Universitário UNIGRANDE: Vídeos institucionais e conteúdos académicos.",
+                            "CAESB: Edição de materiais informativos e institucionais.",
+                            "Jurídico: Criação de conteúdo para advogado especialista em direito público.",
+                            "Marketing & Estética: Vídeos comerciais, campanhas digitais e conteúdos promocionais.",
+                            "Redes Sociais: Edição de alta retenção (Reels/TikTok) com motion design, cortes dinâmicos e legendas."
+                        ]
+                    },
+                    job2: {
+                        title: "Gestão e Atendimento",
+                        date: "Fev 2017 - Dez 2022",
+                        location: "Sorvetes Recreio | Belo Horizonte",
+                        description: "Atuação direta na gestão operacional e atendimento ao cliente durante 6 anos. Responsável pela preparação de produtos, operação de caixa, organização da loja e gestão de stock. Desenvolvimento de fortes competências de trabalho em equipa."
+                    },
+                    educationTitle: "Educação",
+                    education: {
+                        course: "Jornalismo e Comunicação",
+                        school: "Estácio Floresta",
+                        date: "2022 - Atual (Licenciatura)"
+                    },
+                    skillsTitle: "Competências",
+                    skillsList: ["Storytelling Audiovisual", "Comunicação Eficaz", "Aprendizagem Rápida", "Adaptabilidade Tecnológica", "Inteligência Artificial (Uso & Ferramentas)", "Referências Mediáticas"],
+                    softwaresTitle: "Softwares",
+                    languagesTitle: "Idiomas",
+                    languagesList: [
+                        { name: "Português", level: "Nativo" },
+                        { name: "Inglês", level: "Avançado" },
+                        { name: "Francês", level: "Básico (A aprender)" }
+                    ]
+                }
             },
             en: {
                 toggleCV: "CV Mode",
@@ -212,8 +318,214 @@
                 },
                 experience: { title: "Timeline", subtitle: "My career path on the editing timeline" },
                 skills: { title: "Creative Arsenal", tech: "Software", soft: "Soft Skills" },
-                contact: { title: "Let's Create?", subtitle: "Your project deserves a cinematic edit.", btn: "Start Conversation" }
+                contact: { title: "Let's Create?", subtitle: "Your project deserves a cinematic edit.", btn: "Start Conversation" },
+                cv: {
+                    summaryTitle: "Summary",
+                    summaryText: "I am a developing artist and composer and a journalism student with a great passion for content creation. Since 2022, I have been intensely dedicated to learning audio, video, and image editing software to enhance my skills in audiovisual production. This journey has allowed me to work on over 200 projects, developing a creative eye for audiovisuals.",
+                    experienceTitle: "Professional Experience",
+                    job1: {
+                        title: "Freelance Video Editor",
+                        date: "Dec 2022 - Present",
+                        location: "Diverse Projects & Remote",
+                        description: "Working with video editing since 2022 on institutional, commercial, and social media projects. Over 200 projects delivered.",
+                        clientsTitle: "Key Clients & Projects:",
+                        clients: [
+                            "Conceição das Alagoas City Hall: Official Carnival 2023 video editing.",
+                            "UNIGRANDE University Center: Institutional videos and academic content.",
+                            "CAESB: Editing of informational and institutional materials.",
+                            "Legal: Content creation for a lawyer specializing in public law.",
+                            "Marketing & Aesthetics: Commercial videos, digital campaigns, and promotional content.",
+                            "Social Media: High-retention editing (Reels/TikTok) with motion design, dynamic cuts, and captions."
+                        ]
+                    },
+                    job2: {
+                        title: "Management & Customer Service",
+                        date: "Feb 2017 - Dec 2022",
+                        location: "Sorvetes Recreio | Belo Horizonte",
+                        description: "Direct action in operational management and customer service for 6 years. Responsible for product preparation, cashier operation, store organization, and inventory management. Developed strong teamwork, communication, and problem-solving skills under pressure."
+                    },
+                    educationTitle: "Education",
+                    education: {
+                        course: "Journalism and Communication",
+                        school: "Estácio Floresta",
+                        date: "2022 - Present (Undergraduate)"
+                    },
+                    skillsTitle: "Skills",
+                    skillsList: ["Audiovisual Storytelling", "Effective Communication", "Fast Learning", "Tech Adaptability", "Artificial Intelligence (Usage & Tools)", "Media References"],
+                    softwaresTitle: "Software",
+                    languagesTitle: "Languages",
+                    languagesList: [
+                        { name: "Portuguese", level: "Native" },
+                        { name: "English", level: "Advanced" },
+                        { name: "French", level: "Basic (Learning)" }
+                    ]
+                }
             },
+            es: {
+                toggleCV: "Modo Currículum",
+                toggleVisual: "Modo Interactivo",
+                nav: { home: "Inicio", about: "Sobre mí", experience: "Experiencia", skills: "Habilidades", contact: "Contacto" },
+                hero: { available: "Disponible para proyectos", role: "Editor de Video", roleSuffix: "Narrador Visual", description: "Transformo material bruto en narrativas de alto impacto. Enfoque en ritmo visual, diseño de movimiento y retención de audiencia para la era digital.", cta: "Ver Portafolio", cv: "Descargar CV" },
+                about: { 
+                    title: "¿Quién es Felipe?", 
+                    bio: "Hola, soy Felipe Rodrigues da Fonseca (Felipe Canneli). Más que un editor, soy un compositor visual. Con formación en periodismo y una pasión obsesiva por el ritmo y la narrativa, transformo horas de grabación en minutos de pura atención.",
+                    stats: [ { val: "200+", label: "Proyectos" }, { val: "3", label: "Años Exp." }, { val: "100%", label: "Retención" } ]
+                },
+                experience: { title: "Línea de Tiempo", subtitle: "Mi trayectoria en la línea de edición" },
+                skills: { title: "Arsenal Creativo", tech: "Software", soft: "Habilidades" },
+                contact: { title: "¿Creamos?", subtitle: "Tu proyecto merece una edición cinematográfica.", btn: "Iniciar Conversación" },
+                cv: {
+                    summaryTitle: "Resumen",
+                    summaryText: "Soy un artista y compositor en desarrollo y estudiante de periodismo, con una gran pasión por la creación de contenido. Desde 2022, me he dedicado intensamente al aprendizaje de software de edición de audio, video e imágenes para mejorar mis habilidades en producción audiovisual. Esta jornada me ha permitido trabajar en más de 200 proyectos.",
+                    experienceTitle: "Experiencia Profesional",
+                    job1: {
+                        title: "Editor de Videos Freelance",
+                        date: "Dic 2022 - Presente",
+                        location: "Proyectos Diversos & Remoto",
+                        description: "Trabajo con edición de video desde 2022 en proyectos institucionales, comerciales y redes sociales. Más de 200 proyectos entregados.",
+                        clientsTitle: "Principales Clientes y Proyectos:",
+                        clients: [
+                            "Ayuntamiento de Conceição das Alagoas: Edición de videos oficiales del Carnaval 2023.",
+                            "Centro Universitario UNIGRANDE: Videos institucionales y contenidos académicos.",
+                            "CAESB: Edición de materiales informativos e institucionales.",
+                            "Jurídico: Creación de contenido para abogado especialista en derecho público.",
+                            "Marketing y Estética: Videos comerciales, campañas digitales y contenidos promocionales.",
+                            "Redes Sociales: Edición de alta retención (Reels/TikTok) con diseño de movimiento, cortes dinámicos y subtítulos."
+                        ]
+                    },
+                    job2: {
+                        title: "Gestión y Atención al Cliente",
+                        date: "Feb 2017 - Dic 2022",
+                        location: "Sorvetes Recreio | Belo Horizonte",
+                        description: "Actuación directa en la gestión operativa y atención al cliente durante 6 años. Responsable de la preparación de productos, operación de caja, organización de la tienda y gestión de inventario. Desarrollo de fuertes habilidades de trabajo en equipo y resolución de problemas."
+                    },
+                    educationTitle: "Educación",
+                    education: {
+                        course: "Periodismo y Comunicación",
+                        school: "Estácio Floresta",
+                        date: "2022 - Actualidad (Grado)"
+                    },
+                    skillsTitle: "Habilidades",
+                    skillsList: ["Storytelling Audiovisual", "Comunicación Eficaz", "Aprendizaje Rápido", "Adaptabilidad Tecnológica", "Inteligencia Artificial (Uso y Herramientas)", "Referencias Mediáticas"],
+                    softwaresTitle: "Software",
+                    languagesTitle: "Idiomas",
+                    languagesList: [
+                        { name: "Portugués", level: "Nativo" },
+                        { name: "Inglés", level: "Avanzado" },
+                        { name: "Francés", level: "Básico (Aprendiendo)" }
+                    ]
+                }
+            },
+            fr: {
+                toggleCV: "Mode CV",
+                toggleVisual: "Mode Interactif",
+                nav: { home: "Accueil", about: "À propos", experience: "Expérience", skills: "Compétences", contact: "Contact" },
+                hero: { available: "Disponible pour projets", role: "Monteur Vidéo", roleSuffix: "Conteur Visuel", description: "Je transforme les images brutes en récits à fort impact. Focus sur le rythme visuel, le motion design et la rétention d'audience pour l'ère numérique.", cta: "Voir Portfolio", cv: "Télécharger CV" },
+                about: { 
+                    title: "Qui est Felipe ?", 
+                    bio: "Bonjour, je suis Felipe Rodrigues da Fonseca (Felipe Canneli). Plus qu'un monteur, je suis un compositeur visuel. Avec une formation en journalisme et une passion pour le rythme et la narration, je transforme des heures de tournage en minutes d'attention pure.",
+                    stats: [ { val: "200+", label: "Projets" }, { val: "3", label: "Ans d'Exp." }, { val: "100%", label: "Rétention" } ]
+                },
+                experience: { title: "Chronologie", subtitle: "Mon parcours sur la timeline de montage" },
+                skills: { title: "Arsenal Créatif", tech: "Logiciels", soft: "Qualités" },
+                contact: { title: "On crée ?", subtitle: "Votre projet mérite un montage cinématographique.", btn: "Lancer la Conversation" },
+                cv: {
+                    summaryTitle: "Résumé",
+                    summaryText: "Je suis un artiste et compositeur en développement et étudiant en journalisme, passionné par la création de contenu. Depuis 2022, je me consacre intensément à l'apprentissage de logiciels de montage audio, vidéo et image pour améliorer mes compétences en production audiovisuelle. Ce parcours m'a permis de travailler sur plus de 200 projets.",
+                    experienceTitle: "Expérience Professionnelle",
+                    job1: {
+                        title: "Monteur Vidéo Freelance",
+                        date: "Déc 2022 - Présent",
+                        location: "Projets Divers & À distance",
+                        description: "Montage vidéo depuis 2022 pour des projets institutionnels, commerciaux et réseaux sociaux. Plus de 200 projets livrés.",
+                        clientsTitle: "Principaux Clients & Projets :",
+                        clients: [
+                            "Mairie de Conceição das Alagoas : Montage vidéos officiels Carnaval 2023.",
+                            "Centre Universitaire UNIGRANDE : Vidéos institutionnelles et contenus académiques.",
+                            "CAESB : Montage de supports informatifs et institutionnels.",
+                            "Juridique : Création de contenu pour avocat spécialisé en droit public.",
+                            "Marketing & Esthétique : Vidéos commerciales, campagnes numériques et contenus promotionnels.",
+                            "Réseaux Sociaux : Montage haute rétention (Reels/TikTok) avec motion design, coupes dynamiques et sous-titres."
+                        ]
+                    },
+                    job2: {
+                        title: "Gestion et Service Client",
+                        date: "Fév 2017 - Déc 2022",
+                        location: "Sorvetes Recreio | Belo Horizonte",
+                        description: "Action directe dans la gestion opérationnelle et le service client pendant 6 ans. Responsable de la préparation des produits, de la caisse, de l'organisation du magasin et de la gestion des stocks. Développement de solides compétences en travail d'équipe."
+                    },
+                    educationTitle: "Éducation",
+                    education: {
+                        course: "Journalisme et Communication",
+                        school: "Estácio Floresta",
+                        date: "2022 - Actuel (Licence)"
+                    },
+                    skillsTitle: "Compétences",
+                    skillsList: ["Storytelling Audiovisuel", "Communication Efficace", "Apprentissage Rapide", "Adaptabilité Technologique", "Intelligence Artificielle (Usage & Outils)", "Références Médiatiques"],
+                    softwaresTitle: "Logiciels",
+                    languagesTitle: "Langues",
+                    languagesList: [
+                        { name: "Portugais", level: "Natif" },
+                        { name: "Anglais", level: "Avancé" },
+                        { name: "Français", level: "Basique (Apprentissage)" }
+                    ]
+                }
+            },
+            it: {
+                toggleCV: "Modalità CV",
+                toggleVisual: "Modalità Interattiva",
+                nav: { home: "Home", about: "Chi sono", experience: "Esperienza", skills: "Competenze", contact: "Contatti" },
+                hero: { available: "Disponibile per progetti", role: "Video Editor", roleSuffix: "Visual Storyteller", description: "Trasformo filmati grezzi in narrazioni ad alto impatto. Focus su ritmo visivo, motion design e fidelizzazione del pubblico per l'era digitale.", cta: "Vedi Portfolio", cv: "Scarica CV" },
+                about: { 
+                    title: "Chi è Felipe?", 
+                    bio: "Ciao, sono Felipe Rodrigues da Fonseca (Felipe Canneli). Più che un editor, sono un compositore visivo. Con un background in giornalismo e una passione ossessiva per il ritmo e la narrazione, trasformo ore di riprese in minuti di pura attenzione.",
+                    stats: [ { val: "200+", label: "Progetti" }, { val: "3", label: "Anni Esp." }, { val: "100%", label: "Ritenzione" } ]
+                },
+                experience: { title: "Timeline", subtitle: "Il mio percorso sulla timeline di montaggio" },
+                skills: { title: "Arsenale Creativo", tech: "Software", soft: "Abilità" },
+                contact: { title: "Creiamo?", subtitle: "Il tuo progetto merita un montaggio cinematografico.", btn: "Inizia Conversazione" },
+                cv: {
+                    summaryTitle: "Riepilogo",
+                    summaryText: "Sono un artista e compositore in via di sviluppo e studente di giornalismo, con una grande passione per la creazione di contenuti. Dal 2022 mi dedico intensamente all'apprendimento di software di editing audio, video e immagini per migliorare le mie capacità nella produzione audiovisiva. Questo percorso mi ha permesso di lavorare su oltre 200 progetti.",
+                    experienceTitle: "Esperienza Professionale",
+                    job1: {
+                        title: "Video Editor Freelance",
+                        date: "Dic 2022 - Presente",
+                        location: "Progetti Vari & Remoto",
+                        description: "Mi occupo di montaggio video dal 2022 in progetti istituzionali, commerciali e social media. Oltre 200 progetti consegnati.",
+                        clientsTitle: "Principali Clienti & Progetti:",
+                        clients: [
+                            "Municipio di Conceição das Alagoas: Montaggio video ufficiali Carnevale 2023.",
+                            "Centro Universitario UNIGRANDE: Video istituzionali e contenuti accademici.",
+                            "CAESB: Montaggio di materiali informativi e istituzionali.",
+                            "Legale: Creazione di contenuti per avvocato specializzato in diritto pubblico.",
+                            "Marketing & Estetica: Video commerciali, campagne digitali e contenuti promozionali.",
+                            "Social Media: Montaggio ad alta ritenzione (Reels/TikTok) con motion design, tagli dinamici e sottotitoli."
+                        ]
+                    },
+                    job2: {
+                        title: "Gestione e Servizio Clienti",
+                        date: "Feb 2017 - Dic 2022",
+                        location: "Sorvetes Recreio | Belo Horizonte",
+                        description: "Azione diretta nella gestione operativa e servizio clienti per 6 anni. Responsabile della preparazione dei prodotti, cassa, organizzazione del negozio e gestione dell'inventario. Sviluppo di forti capacità di lavoro di squadra."
+                    },
+                    educationTitle: "Istruzione",
+                    education: {
+                        course: "Giornalismo e Comunicazione",
+                        school: "Estácio Floresta",
+                        date: "2022 - Attuale (Laurea)"
+                    },
+                    skillsTitle: "Competenze",
+                    skillsList: ["Storytelling Audiovisivo", "Comunicazione Efficace", "Apprendimento Rapido", "Adattabilità Tecnologica", "Intelligenza Artificiale (Uso & Strumenti)", "Riferimenti Mediatici"],
+                    softwaresTitle: "Software",
+                    languagesTitle: "Lingue",
+                    languagesList: [
+                        { name: "Portoghese", level: "Madrelingua" },
+                        { name: "Inglese", level: "Avanzato" },
+                        { name: "Francese", level: "Base (In apprendimento)" }
+                    ]
+                }
+            }
         };
 
         const BentoCard = ({ children, className, delay = "0" }) => (
@@ -223,22 +535,24 @@
             </div>
         );
 
-        // --- CV Layout (Formal) ---
+        // --- CV Layout (Formal & Completão & Traduzido) ---
         const CVLayout = ({ t }) => (
             <div className="min-h-screen bg-slate-100 p-4 md:p-12 animate-fade-in text-slate-800 font-sans flex justify-center">
                 <div className="w-full max-w-[210mm] bg-white shadow-2xl rounded-sm p-8 md:p-16 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-2 bg-slate-900"></div>
                     
-                    <header className="flex justify-between items-end border-b-2 border-slate-900 pb-8 mb-10">
+                    <header className="flex justify-between items-start border-b-2 border-slate-900 pb-8 mb-10">
                         <div>
-                            {/* NOME ALTERADO CONFORME SOLICITADO */}
+                            {/* NOME FORMAL */}
                             <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-2">Felipe Rodrigues da Fonseca</h1>
                             <p className="text-xl text-slate-600 font-medium tracking-wide uppercase">{t.hero.role}</p>
                         </div>
                         <div className="text-right text-sm text-slate-600 space-y-1">
-                            <p>Belo Horizonte, MG</p>
+                            <p className="font-bold text-slate-800">Belo Horizonte, MG</p>
                             <p>felip0fonseca@gmail.com</p>
+                            <p>(31) 98554-7183</p>
                             <p>linkedin.com/in/felipecanneli</p>
+                            <p>canneli.github.io/portfolio</p>
                         </div>
                     </header>
 
@@ -246,38 +560,49 @@
                         <div className="space-y-10">
                             <section>
                                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                                    <span className="w-2 h-2 bg-slate-900 rounded-full"></span> Resumo
+                                    <span className="w-2 h-2 bg-slate-900 rounded-full"></span> {t.cv.summaryTitle}
                                 </h2>
-                                <p className="text-slate-700 leading-relaxed text-justify">
-                                    {t.about.bio}
+                                <p className="text-slate-700 leading-relaxed text-justify text-sm">
+                                    {t.cv.summaryText}
                                 </p>
                             </section>
 
                             <section>
                                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
-                                    <span className="w-2 h-2 bg-slate-900 rounded-full"></span> Experiência
+                                    <span className="w-2 h-2 bg-slate-900 rounded-full"></span> {t.cv.experienceTitle}
                                 </h2>
                                 <div className="space-y-8 border-l-2 border-slate-200 pl-6 ml-1">
+                                    
+                                    {/* Editor Freelancer */}
                                     <div className="relative">
                                         <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-white bg-slate-900"></div>
                                         <div className="flex justify-between items-baseline mb-1">
-                                            <h3 className="font-bold text-lg text-slate-900">Editor de Vídeos Freelancer</h3>
-                                            <span className="text-xs font-bold bg-slate-100 px-2 py-1 rounded text-slate-600">Dez 2022 - Presente</span>
+                                            <h3 className="font-bold text-lg text-slate-900">{t.cv.job1.title}</h3>
+                                            <span className="text-xs font-bold bg-slate-100 px-2 py-1 rounded text-slate-600">{t.cv.job1.date}</span>
                                         </div>
-                                        <p className="text-slate-500 text-sm mb-2">Projetos Diversos</p>
-                                        <ul className="list-disc ml-4 text-sm text-slate-700 space-y-1">
-                                            <li>Edição de vídeos institucionais, comerciais e redes sociais.</li>
-                                            <li>Motion Graphics básico e tratamento de cor.</li>
-                                            <li>Mais de 200 projetos entregues com foco em narrativa.</li>
+                                        <p className="text-slate-500 text-sm mb-2 italic">{t.cv.job1.location}</p>
+                                        <p className="text-sm text-slate-700 mb-2">
+                                            {t.cv.job1.description}
+                                        </p>
+                                        <p className="text-xs font-bold uppercase text-slate-400 mt-3 mb-1">{t.cv.job1.clientsTitle}</p>
+                                        <ul className="list-disc ml-4 text-sm text-slate-700 space-y-1 marker:text-slate-400">
+                                            {t.cv.job1.clients.map((client, index) => (
+                                                <li key={index}>{client}</li>
+                                            ))}
                                         </ul>
                                     </div>
+
+                                    {/* Sorvetes Recreio */}
                                     <div className="relative">
                                         <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-white bg-slate-300"></div>
                                         <div className="flex justify-between items-baseline mb-1">
-                                            <h3 className="font-bold text-lg text-slate-900">Gestão e Atendimento</h3>
-                                            <span className="text-xs font-bold bg-slate-100 px-2 py-1 rounded text-slate-600">2017 - 2022</span>
+                                            <h3 className="font-bold text-lg text-slate-900">{t.cv.job2.title}</h3>
+                                            <span className="text-xs font-bold bg-slate-100 px-2 py-1 rounded text-slate-600">{t.cv.job2.date}</span>
                                         </div>
-                                        <p className="text-slate-500 text-sm">Sorvetes Recreio</p>
+                                        <p className="text-slate-500 text-sm mb-2">{t.cv.job2.location}</p>
+                                        <p className="text-sm text-slate-700 text-justify">
+                                            {t.cv.job2.description}
+                                        </p>
                                     </div>
                                 </div>
                             </section>
@@ -285,19 +610,28 @@
 
                         <div className="space-y-10">
                             <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Educação</h2>
+                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">{t.cv.educationTitle}</h2>
                                 <div>
-                                    <h3 className="font-bold text-slate-900">Jornalismo</h3>
-                                    <p className="text-sm text-slate-600">Estácio Floresta</p>
-                                    <p className="text-xs text-slate-500 mt-1">2022 - Atual</p>
+                                    <h3 className="font-bold text-slate-900">{t.cv.education.course}</h3>
+                                    <p className="text-sm text-slate-600">{t.cv.education.school}</p>
+                                    <p className="text-xs text-slate-500 mt-1">{t.cv.education.date}</p>
                                 </div>
                             </section>
 
                             <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Softwares</h2>
+                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">{t.cv.skillsTitle}</h2>
+                                <ul className="text-sm text-slate-700 space-y-2">
+                                    {t.cv.skillsList.map((skill, i) => (
+                                        <li key={i} className="flex items-start gap-2"><span className="text-slate-400">•</span> {skill}</li>
+                                    ))}
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">{t.cv.softwaresTitle}</h2>
                                 <div className="space-y-3">
                                     {[
-                                        { name: 'Premiere Pro', w: '75%' },
+                                        { name: 'Premiere Pro', w: '85%' },
                                         { name: 'After Effects', w: '60%' },
                                         { name: 'Photoshop', w: '70%' },
                                         { name: 'Logic Pro', w: '50%' },
@@ -318,11 +652,11 @@
                                 </div>
                             </section>
                              <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Idiomas</h2>
+                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">{t.cv.languagesTitle}</h2>
                                 <ul className="text-sm space-y-2 text-slate-700">
-                                    <li><span className="font-bold">Português:</span> Nativo</li>
-                                    <li><span className="font-bold">Inglês:</span> Avançado (C1)</li>
-                                    <li><span className="font-bold">Francês:</span> Básico</li>
+                                    {t.cv.languagesList.map((lang, i) => (
+                                        <li key={i}><span className="font-bold">{lang.name}:</span> {lang.level}</li>
+                                    ))}
                                 </ul>
                             </section>
                         </div>
@@ -336,8 +670,18 @@
             const [activeSection, setActiveSection] = useState('home');
             const [viewMode, setViewMode] = useState('interactive');
             const [language, setLanguage] = useState('pt');
+            const [showLangMenu, setShowLangMenu] = useState(false); // Novo estado para o menu
             const [scrolled, setScrolled] = useState(false);
             const t = translations[language] || translations['pt'];
+
+            const supportedLanguages = [
+                { code: 'pt', label: '🇧🇷 PT' },
+                { code: 'pt-pt', label: '🇵🇹 PT' },
+                { code: 'en', label: '🇺🇸 EN' },
+                { code: 'es', label: '🇪🇸 ES' },
+                { code: 'fr', label: '🇫🇷 FR' },
+                { code: 'it', label: '🇮🇹 IT' }
+            ];
 
             useEffect(() => {
                 const handleScroll = () => {
@@ -421,9 +765,33 @@
                             </div>
 
                             <div className="flex items-center gap-3">
-                                <button onClick={() => setLanguage(l => l === 'pt' ? 'en' : 'pt')} className="text-xs font-bold text-slate-400 hover:text-white border border-white/10 px-2 py-1 rounded uppercase bg-white/5">
-                                    {language}
-                                </button>
+                                {/* NOVO SELETOR DE IDIOMA TIPO DROPDOWN */}
+                                <div className="relative">
+                                    <button 
+                                        onClick={() => setShowLangMenu(!showLangMenu)} 
+                                        className="text-xs font-bold text-slate-400 hover:text-white border border-white/10 px-3 py-2 rounded uppercase bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-2 min-w-[3rem]"
+                                    >
+                                        {supportedLanguages.find(l => l.code === language)?.label || language} <Icon name="chevron-down" size={12} />
+                                    </button>
+                                    
+                                    {showLangMenu && (
+                                        <div className="absolute top-full right-0 mt-2 bg-dark-900 border border-white/10 rounded-xl overflow-hidden shadow-2xl z-50 w-32 animate-fade-in-down">
+                                            {supportedLanguages.map(lang => (
+                                                <button 
+                                                    key={lang.code}
+                                                    onClick={() => {
+                                                        setLanguage(lang.code);
+                                                        setShowLangMenu(false);
+                                                    }}
+                                                    className={`w-full text-left px-4 py-2 text-xs font-bold hover:bg-brand-600/20 hover:text-brand-300 transition-colors ${language === lang.code ? 'text-brand-400 bg-white/5' : 'text-slate-400'}`}
+                                                >
+                                                    {lang.label}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+
                                 <button onClick={() => setViewMode('cv')} className="hidden sm:flex items-center gap-2 text-sm font-bold bg-white text-dark-950 px-4 py-2 rounded-lg hover:bg-slate-200 transition-colors">
                                     <Icon name="file-text" size={16} />
                                     <span className="hidden lg:inline">{t.toggleCV}</span>
