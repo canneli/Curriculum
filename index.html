@@ -39,7 +39,7 @@
                             200: '#c7d2fe',
                             300: '#a5b4fc',
                             400: '#818cf8',
-                            500: '#6366f1', // Indigo Principal
+                            500: '#6366f1',
                             600: '#4f46e5',
                             700: '#4338ca',
                             800: '#3730a3',
@@ -47,11 +47,11 @@
                             950: '#1e1b4b',
                         },
                         accent: {
-                            500: '#d946ef', // Fuchsia
+                            500: '#d946ef',
                             400: '#e879f9',
                         },
                         dark: {
-                            950: '#030304', // Quase preto absoluto
+                            950: '#030304',
                             900: '#0a0a0c',
                             800: '#121215',
                             700: '#1c1c21',
@@ -175,9 +175,27 @@
         .delay-300 { animation-delay: 300ms; }
         
         @media print {
+            @page { 
+                margin: 0; 
+                size: A4 portrait; 
+            }
+            body { 
+                background: white !important; 
+                color: black !important; 
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
             .no-print { display: none !important; }
-            .cv-container { box-shadow: none !important; margin: 0 !important; width: 100% !important; max-width: none !important; }
-            body { background: white; color: black; }
+            .cv-container { 
+                box-shadow: none !important; 
+                margin: 0 !important; 
+                width: 210mm !important; 
+                height: 297mm !important;
+                max-width: 210mm !important; 
+                padding: 12mm 15mm !important; /* Tight padding to ensure 1 page */
+                border: none !important;
+                overflow: hidden !important;
+            }
         }
     </style>
 </head>
@@ -240,14 +258,21 @@
                         school: "Estácio Floresta",
                         date: "2022 - Atual (Graduação)"
                     },
+                    coursesTitle: "Qualificações & Extensão",
+                    coursesList: [
+                        "Assessoria de Comunicação", "Edição de Texto", "Jornalismo Científico", 
+                        "Jornalismo de Dados e Fact-Checking", "Jornalismo Investigativo", 
+                        "Monitoramento de Mídias Sociais", "Operação de Clipping", 
+                        "Produção de Externa / Reportagem", "Projeto Gráfico e Editorial", 
+                        "Redação de Conteúdo Jornalístico", "Webwriting e SEO"
+                    ],
                     skillsTitle: "Competências",
                     skillsList: ["Storytelling Audiovisual", "Comunicação Eficaz", "Aprendizagem Rápida", "Adaptabilidade Tecnológica", "Inteligência Artificial (Uso & Ferramentas)", "Referências Midiáticas"],
                     softwaresTitle: "Softwares",
                     languagesTitle: "Idiomas",
                     languagesList: [
                         { name: "Português", level: "Nativo" },
-                        { name: "Inglês", level: "Avançado" },
-                        { name: "Francês", level: "Básico (Em aprendizado)" }
+                        { name: "Inglês", level: "Avançado" }
                     ]
                 }
             },
@@ -277,7 +302,7 @@
                         clients: [
                             "Prefeitura de Conceição das Alagoas: Edição de vídeos oficiais do Carnaval 2023.",
                             "Centro Universitário UNIGRANDE: Vídeos institucionais e conteúdos académicos.",
-                            "CAESB: Edição de materiais informativos e institucionais.",
+                            "CAESB: Edição de materiais informativos e institucionales.",
                             "Jurídico: Criação de conteúdo para advogado especialista em direito público.",
                             "Marketing & Estética: Vídeos comerciais, campanhas digitais e conteúdos promocionais.",
                             "Redes Sociais: Edição de alta retenção (Reels/TikTok) com motion design, cortes dinâmicos e legendas."
@@ -295,14 +320,21 @@
                         school: "Estácio Floresta",
                         date: "2022 - Atual (Licenciatura)"
                     },
+                    coursesTitle: "Qualificações & Extensão",
+                    coursesList: [
+                        "Assessoria de Comunicação", "Edição de Texto", "Jornalismo Científico", 
+                        "Jornalismo de Dados e Fact-Checking", "Jornalismo Investigativo", 
+                        "Monitorização de Redes Sociais", "Operação de Clipping", 
+                        "Produção de Exterior / Reportagem", "Projeto Gráfico e Editorial", 
+                        "Redação de Conteúdo Jornalístico", "Webwriting e SEO"
+                    ],
                     skillsTitle: "Competências",
                     skillsList: ["Storytelling Audiovisual", "Comunicação Eficaz", "Aprendizagem Rápida", "Adaptabilidade Tecnológica", "Inteligência Artificial (Uso & Ferramentas)", "Referências Mediáticas"],
                     softwaresTitle: "Softwares",
                     languagesTitle: "Idiomas",
                     languagesList: [
                         { name: "Português", level: "Nativo" },
-                        { name: "Inglês", level: "Avançado" },
-                        { name: "Francês", level: "Básico (A aprender)" }
+                        { name: "Inglês", level: "Avançado" }
                     ]
                 }
             },
@@ -350,14 +382,21 @@
                         school: "Estácio Floresta",
                         date: "2022 - Present (Undergraduate)"
                     },
+                    coursesTitle: "Additional Training",
+                    coursesList: [
+                        "Communications Advisory", "Text Editing", "Science Journalism", 
+                        "Data Journalism & Fact-Checking", "Investigative Journalism", 
+                        "Social Media Monitoring", "Clipping Operations", 
+                        "Field Production / Reporting", "Graphic & Editorial Design", 
+                        "Journalistic Content Writing", "Webwriting & SEO"
+                    ],
                     skillsTitle: "Skills",
                     skillsList: ["Audiovisual Storytelling", "Effective Communication", "Fast Learning", "Tech Adaptability", "Artificial Intelligence (Usage & Tools)", "Media References"],
                     softwaresTitle: "Software",
                     languagesTitle: "Languages",
                     languagesList: [
                         { name: "Portuguese", level: "Native" },
-                        { name: "English", level: "Advanced" },
-                        { name: "French", level: "Basic (Learning)" }
+                        { name: "English", level: "Advanced" }
                     ]
                 }
             },
@@ -405,14 +444,21 @@
                         school: "Estácio Floresta",
                         date: "2022 - Actualidad (Grado)"
                     },
+                    coursesTitle: "Formación Complementaria",
+                    coursesList: [
+                        "Asesoría de Comunicación", "Edición de Texto", "Periodismo Científico", 
+                        "Periodismo de Datos y Fact-Checking", "Periodismo de Investigación", 
+                        "Monitoreo de Redes Sociales", "Operación de Clipping", 
+                        "Producción de Campo / Reportaje", "Diseño Gráfico y Editorial", 
+                        "Redacción de Contenido Periodístico", "Webwriting y SEO"
+                    ],
                     skillsTitle: "Habilidades",
                     skillsList: ["Storytelling Audiovisual", "Comunicación Eficaz", "Aprendizaje Rápido", "Adaptabilidad Tecnológica", "Inteligencia Artificial (Uso y Herramientas)", "Referencias Mediáticas"],
                     softwaresTitle: "Software",
                     languagesTitle: "Idiomas",
                     languagesList: [
                         { name: "Portugués", level: "Nativo" },
-                        { name: "Inglés", level: "Avanzado" },
-                        { name: "Francés", level: "Básico (Aprendiendo)" }
+                        { name: "Inglés", level: "Avanzado" }
                     ]
                 }
             },
@@ -460,14 +506,21 @@
                         school: "Estácio Floresta",
                         date: "2022 - Actuel (Licence)"
                     },
+                    coursesTitle: "Formation Complémentaire",
+                    coursesList: [
+                        "Conseil en Communication", "Édition de Texte", "Journalisme Scientifique", 
+                        "Journalisme de Données et Fact-Checking", "Journalisme d'Investigation", 
+                        "Surveillance des Médias Sociaux", "Opérations de Clipping", 
+                        "Production sur le Terrain / Reportage", "Design Graphique et Éditorial", 
+                        "Rédaction de Contenu Journalistique", "Webwriting et SEO"
+                    ],
                     skillsTitle: "Compétences",
                     skillsList: ["Storytelling Audiovisuel", "Communication Efficace", "Apprentissage Rapide", "Adaptabilité Technologique", "Intelligence Artificielle (Usage & Outils)", "Références Médiatiques"],
                     softwaresTitle: "Logiciels",
                     languagesTitle: "Langues",
                     languagesList: [
                         { name: "Portugais", level: "Natif" },
-                        { name: "Anglais", level: "Avancé" },
-                        { name: "Français", level: "Basique (Apprentissage)" }
+                        { name: "Anglais", level: "Avancé" }
                     ]
                 }
             },
@@ -515,14 +568,21 @@
                         school: "Estácio Floresta",
                         date: "2022 - Attuale (Laurea)"
                     },
+                    coursesTitle: "Formazione Complementare",
+                    coursesList: [
+                        "Consulenza in Comunicazione", "Modifica del Testo", "Giornalismo Scientifico", 
+                        "Giornalismo dei Dati e Fact-Checking", "Giornalismo Investigativo", 
+                        "Monitoraggio dei Social Media", "Operazioni di Clipping", 
+                        "Produzione sul Campo / Reportage", "Progettazione Grafica e Editoriale", 
+                        "Scrittura di Contenuti Giornalistici", "Webwriting e SEO"
+                    ],
                     skillsTitle: "Competenze",
                     skillsList: ["Storytelling Audiovisivo", "Comunicazione Efficace", "Apprendimento Rapido", "Adattabilità Tecnologica", "Intelligenza Artificiale (Uso & Strumenti)", "Riferimenti Mediatici"],
                     softwaresTitle: "Software",
                     languagesTitle: "Lingue",
                     languagesList: [
                         { name: "Portoghese", level: "Madrelingua" },
-                        { name: "Inglese", level: "Avanzato" },
-                        { name: "Francese", level: "Base (In apprendimento)" }
+                        { name: "Inglese", level: "Avanzato" }
                     ]
                 }
             }
@@ -535,19 +595,19 @@
             </div>
         );
 
-        // --- CV Layout (Formal & Completão & Traduzido) ---
+        // --- CV Layout (Otimizado para 1 Página de Impressão) ---
         const CVLayout = ({ t }) => (
-            <div className="min-h-screen bg-slate-100 p-4 md:p-12 animate-fade-in text-slate-800 font-sans flex justify-center">
-                <div className="w-full max-w-[210mm] bg-white shadow-2xl rounded-sm p-8 md:p-16 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-slate-900"></div>
+            <div className="min-h-screen bg-slate-100 p-4 md:p-12 print:p-0 animate-fade-in text-slate-800 font-sans flex justify-center">
+                <div className="cv-container w-full max-w-[210mm] bg-white shadow-2xl rounded-sm p-8 md:p-12 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-2 bg-slate-900 print:h-1"></div>
                     
-                    <header className="flex justify-between items-start border-b-2 border-slate-900 pb-8 mb-10">
+                    <header className="flex justify-between items-start border-b-2 border-slate-900 pb-6 mb-8 print:pb-4 print:mb-5">
                         <div>
                             {/* NOME FORMAL */}
-                            <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-2">Felipe Rodrigues da Fonseca</h1>
-                            <p className="text-xl text-slate-600 font-medium tracking-wide uppercase">{t.hero.role}</p>
+                            <h1 className="text-4xl md:text-5xl print:text-[28px] font-serif font-bold text-slate-900 mb-2 print:mb-1">Felipe Rodrigues da Fonseca</h1>
+                            <p className="text-xl print:text-base text-slate-600 font-medium tracking-wide uppercase">{t.hero.role}</p>
                         </div>
-                        <div className="text-right text-sm text-slate-600 space-y-1">
+                        <div className="text-right text-sm print:text-xs text-slate-600 space-y-1 print:space-y-0.5">
                             <p className="font-bold text-slate-800">Belo Horizonte, MG</p>
                             <p>felip0fonseca@gmail.com</p>
                             <p>(31) 98554-7183</p>
@@ -556,36 +616,37 @@
                         </div>
                     </header>
 
-                    <div className="grid grid-cols-[2fr_1fr] gap-12">
-                        <div className="space-y-10">
+                    <div className="grid grid-cols-[2fr_1fr] gap-12 print:gap-8">
+                        {/* Coluna Esquerda */}
+                        <div className="space-y-10 print:space-y-6">
                             <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
+                                <h2 className="text-sm print:text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 print:mb-2 flex items-center gap-2">
                                     <span className="w-2 h-2 bg-slate-900 rounded-full"></span> {t.cv.summaryTitle}
                                 </h2>
-                                <p className="text-slate-700 leading-relaxed text-justify text-sm">
+                                <p className="text-slate-700 leading-relaxed print:leading-snug text-justify text-sm print:text-xs">
                                     {t.cv.summaryText}
                                 </p>
                             </section>
 
                             <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
+                                <h2 className="text-sm print:text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 print:mb-4 flex items-center gap-2">
                                     <span className="w-2 h-2 bg-slate-900 rounded-full"></span> {t.cv.experienceTitle}
                                 </h2>
-                                <div className="space-y-8 border-l-2 border-slate-200 pl-6 ml-1">
+                                <div className="space-y-8 print:space-y-5 border-l-2 border-slate-200 pl-6 ml-1">
                                     
                                     {/* Editor Freelancer */}
                                     <div className="relative">
                                         <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-white bg-slate-900"></div>
                                         <div className="flex justify-between items-baseline mb-1">
-                                            <h3 className="font-bold text-lg text-slate-900">{t.cv.job1.title}</h3>
-                                            <span className="text-xs font-bold bg-slate-100 px-2 py-1 rounded text-slate-600">{t.cv.job1.date}</span>
+                                            <h3 className="font-bold text-lg print:text-base text-slate-900">{t.cv.job1.title}</h3>
+                                            <span className="text-xs print:text-[10px] font-bold bg-slate-100 px-2 py-1 rounded text-slate-600">{t.cv.job1.date}</span>
                                         </div>
-                                        <p className="text-slate-500 text-sm mb-2 italic">{t.cv.job1.location}</p>
-                                        <p className="text-sm text-slate-700 mb-2">
+                                        <p className="text-slate-500 text-sm print:text-xs mb-2 print:mb-1.5 italic">{t.cv.job1.location}</p>
+                                        <p className="text-sm print:text-[11px] text-slate-700 mb-2 print:mb-1.5 print:leading-snug">
                                             {t.cv.job1.description}
                                         </p>
-                                        <p className="text-xs font-bold uppercase text-slate-400 mt-3 mb-1">{t.cv.job1.clientsTitle}</p>
-                                        <ul className="list-disc ml-4 text-sm text-slate-700 space-y-1 marker:text-slate-400">
+                                        <p className="text-xs print:text-[10px] font-bold uppercase text-slate-400 mt-3 print:mt-1.5 mb-1">{t.cv.job1.clientsTitle}</p>
+                                        <ul className="list-disc ml-4 text-sm print:text-[11px] text-slate-700 space-y-1 print:space-y-0.5 marker:text-slate-400 print:leading-snug">
                                             {t.cv.job1.clients.map((client, index) => (
                                                 <li key={index}>{client}</li>
                                             ))}
@@ -596,11 +657,11 @@
                                     <div className="relative">
                                         <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-white bg-slate-300"></div>
                                         <div className="flex justify-between items-baseline mb-1">
-                                            <h3 className="font-bold text-lg text-slate-900">{t.cv.job2.title}</h3>
-                                            <span className="text-xs font-bold bg-slate-100 px-2 py-1 rounded text-slate-600">{t.cv.job2.date}</span>
+                                            <h3 className="font-bold text-lg print:text-base text-slate-900">{t.cv.job2.title}</h3>
+                                            <span className="text-xs print:text-[10px] font-bold bg-slate-100 px-2 py-1 rounded text-slate-600">{t.cv.job2.date}</span>
                                         </div>
-                                        <p className="text-slate-500 text-sm mb-2">{t.cv.job2.location}</p>
-                                        <p className="text-sm text-slate-700 text-justify">
+                                        <p className="text-slate-500 text-sm print:text-xs mb-2 print:mb-1">{t.cv.job2.location}</p>
+                                        <p className="text-sm print:text-[11px] text-slate-700 text-justify print:leading-snug">
                                             {t.cv.job2.description}
                                         </p>
                                     </div>
@@ -608,28 +669,36 @@
                             </section>
                         </div>
 
-                        <div className="space-y-10">
+                        {/* Coluna Direita */}
+                        <div className="space-y-10 print:space-y-6">
                             <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">{t.cv.educationTitle}</h2>
+                                <h2 className="text-sm print:text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 print:mb-2">{t.cv.educationTitle}</h2>
                                 <div>
-                                    <h3 className="font-bold text-slate-900">{t.cv.education.course}</h3>
-                                    <p className="text-sm text-slate-600">{t.cv.education.school}</p>
-                                    <p className="text-xs text-slate-500 mt-1">{t.cv.education.date}</p>
+                                    <h3 className="font-bold text-slate-900 print:text-sm">{t.cv.education.course}</h3>
+                                    <p className="text-sm print:text-xs text-slate-600">{t.cv.education.school}</p>
+                                    <p className="text-xs print:text-[10px] text-slate-500 mt-1">{t.cv.education.date}</p>
                                 </div>
                             </section>
 
                             <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">{t.cv.skillsTitle}</h2>
-                                <ul className="text-sm text-slate-700 space-y-2">
+                                <h2 className="text-sm print:text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 print:mb-2">{t.cv.coursesTitle}</h2>
+                                <p className="text-sm print:text-[11px] text-slate-700 leading-relaxed print:leading-snug">
+                                    {t.cv.coursesList.join(" • ")}
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-sm print:text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 print:mb-2">{t.cv.skillsTitle}</h2>
+                                <ul className="text-sm print:text-[11px] text-slate-700 space-y-2 print:space-y-1">
                                     {t.cv.skillsList.map((skill, i) => (
-                                        <li key={i} className="flex items-start gap-2"><span className="text-slate-400">•</span> {skill}</li>
+                                        <li key={i} className="flex items-start gap-2"><span className="text-slate-400">•</span> <span className="leading-snug">{skill}</span></li>
                                     ))}
                                 </ul>
                             </section>
 
                             <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">{t.cv.softwaresTitle}</h2>
-                                <div className="space-y-3">
+                                <h2 className="text-sm print:text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 print:mb-2">{t.cv.softwaresTitle}</h2>
+                                <div className="space-y-3 print:space-y-2">
                                     {[
                                         { name: 'Premiere Pro', w: '85%' },
                                         { name: 'After Effects', w: '60%' },
@@ -638,22 +707,23 @@
                                         { name: 'Reaper', w: '50%' }
                                     ].map(s => (
                                         <div key={s.name}>
-                                            <div className="flex justify-between text-xs font-bold mb-1">
+                                            <div className="flex justify-between text-xs print:text-[10px] font-bold mb-1">
                                                 <span>{s.name}</span>
                                             </div>
-                                            <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
+                                            <div className="h-1.5 print:h-1 bg-slate-200 rounded-full overflow-hidden">
                                                 <div className="h-full bg-slate-800" style={{width: s.w}}></div>
                                             </div>
                                         </div>
                                     ))}
-                                    <div className="text-xs text-slate-500 mt-2 italic">
+                                    <div className="text-xs print:text-[9px] text-slate-500 mt-2 print:mt-1 italic">
                                         *Conhecimento básico em Color Grading
                                     </div>
                                 </div>
                             </section>
+                            
                              <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">{t.cv.languagesTitle}</h2>
-                                <ul className="text-sm space-y-2 text-slate-700">
+                                <h2 className="text-sm print:text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 print:mb-2">{t.cv.languagesTitle}</h2>
+                                <ul className="text-sm print:text-[11px] space-y-2 print:space-y-1 text-slate-700">
                                     {t.cv.languagesList.map((lang, i) => (
                                         <li key={i}><span className="font-bold">{lang.name}:</span> {lang.level}</li>
                                     ))}
@@ -670,7 +740,7 @@
             const [activeSection, setActiveSection] = useState('home');
             const [viewMode, setViewMode] = useState('interactive');
             const [language, setLanguage] = useState('pt');
-            const [showLangMenu, setShowLangMenu] = useState(false); // Novo estado para o menu
+            const [showLangMenu, setShowLangMenu] = useState(false);
             const [scrolled, setScrolled] = useState(false);
             const t = translations[language] || translations['pt'];
 
@@ -686,7 +756,6 @@
             useEffect(() => {
                 const handleScroll = () => {
                     setScrolled(window.scrollY > 50);
-                    // Simple ScrollSpy
                     const sections = ['home', 'about', 'experience', 'skills', 'contact'];
                     const current = sections.find(section => {
                         const el = document.getElementById(section);
@@ -729,10 +798,7 @@
                     
                     {/* --- BACKGROUND AMBIENCE --- */}
                     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                         {/* Grid Pattern */}
                         <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
-                        
-                        {/* Blobs */}
                         <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-brand-600/20 rounded-full mix-blend-screen blur-[120px] animate-blob"></div>
                         <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-600/20 rounded-full mix-blend-screen blur-[120px] animate-blob" style={{animationDelay: '2s'}}></div>
                         <div className="absolute top-[40%] left-[30%] w-[30vw] h-[30vw] bg-indigo-600/10 rounded-full mix-blend-screen blur-[100px] animate-pulse-slow"></div>
@@ -765,7 +831,7 @@
                             </div>
 
                             <div className="flex items-center gap-3">
-                                {/* NOVO SELETOR DE IDIOMA TIPO DROPDOWN */}
+                                {/* SELETOR DE IDIOMA */}
                                 <div className="relative">
                                     <button 
                                         onClick={() => setShowLangMenu(!showLangMenu)} 
@@ -835,7 +901,6 @@
 
                             {/* Visual/3D Element */}
                             <div className="relative h-[400px] lg:h-[600px] flex items-center justify-center perspective-container animate-scale-in delay-200">
-                                {/* Floating Elements simulating editing interface */}
                                 <div className="absolute w-64 h-80 bg-gradient-to-br from-dark-800 to-dark-900 border border-white/10 rounded-2xl shadow-2xl rotate-[-6deg] z-10 glass-card-hover flex flex-col overflow-hidden animate-float">
                                     <div className="h-8 bg-white/5 border-b border-white/5 flex items-center gap-2 px-3">
                                         <div className="w-2 h-2 rounded-full bg-red-500"></div>
@@ -893,7 +958,7 @@
                         </div>
                     </section>
 
-                    {/* --- EXPERIENCE SECTION (TIMELINE UI) --- */}
+                    {/* --- EXPERIENCE SECTION --- */}
                     <section id="experience" className="py-24 relative z-10 bg-dark-900/50">
                         <div className="max-w-5xl mx-auto px-6">
                             <div className="text-center mb-16">
@@ -902,7 +967,6 @@
                             </div>
 
                             <div className="relative">
-                                {/* Time Marker Header */}
                                 <div className="flex justify-between text-xs font-mono text-slate-600 border-b border-white/10 pb-2 mb-8 select-none">
                                     <span>00:00:00</span>
                                     <span>00:01:00</span>
@@ -910,14 +974,11 @@
                                     <span>00:03:00</span>
                                 </div>
 
-                                {/* Playhead Line */}
                                 <div className="absolute top-0 left-[20%] h-full w-[1px] bg-red-500 z-20 hidden md:block opacity-50">
                                     <div className="absolute -top-1 -left-[5px] w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-red-500"></div>
                                 </div>
 
-                                {/* Experience Tracks */}
                                 <div className="space-y-4">
-                                    {/* Job 1 */}
                                     <div className="group relative">
                                         <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-500 rounded-l-full"></div>
                                         <div className="bg-dark-800/80 border border-white/5 rounded-r-lg p-6 ml-1 hover:bg-dark-700 transition-colors cursor-pointer relative overflow-hidden">
@@ -939,7 +1000,6 @@
                                         </div>
                                     </div>
 
-                                    {/* Job 2 */}
                                     <div className="group relative opacity-70 hover:opacity-100 transition-opacity">
                                         <div className="absolute left-0 top-0 bottom-0 w-1 bg-purple-600 rounded-l-full"></div>
                                         <div className="bg-dark-800/80 border border-white/5 rounded-r-lg p-6 ml-1 hover:bg-dark-700 transition-colors cursor-pointer relative">
@@ -965,7 +1025,7 @@
                         </div>
                     </section>
 
-                    {/* --- SKILLS (BENTO GRID) --- */}
+                    {/* --- SKILLS SECTION --- */}
                     <section id="skills" className="py-24 relative z-10 px-6">
                         <div className="max-w-7xl mx-auto">
                             <div className="mb-12">
@@ -973,7 +1033,7 @@
                             </div>
                             
                             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[180px]">
-                                {/* Premiere Pro (Large) */}
+                                {/* Premiere Pro */}
                                 <BentoCard className="md:col-span-2 md:row-span-2 bg-gradient-to-br from-[#9999FF]/10 to-transparent">
                                     <div className="flex flex-col justify-between h-full">
                                         <div className="w-12 h-12 bg-[#9999FF]/20 rounded-xl flex items-center justify-center text-[#9999FF]">
@@ -1005,7 +1065,7 @@
                                     </div>
                                 </BentoCard>
 
-                                {/* Audio (Logic / Reaper) - NEW CARD */}
+                                {/* Audio (Logic / Reaper) */}
                                 <BentoCard className="bg-gradient-to-br from-yellow-500/10 to-transparent">
                                     <div className="flex flex-col justify-between h-full">
                                         <div className="flex gap-2">
@@ -1022,7 +1082,7 @@
                                     </div>
                                 </BentoCard>
 
-                                {/* Soft Skills Cluster */}
+                                {/* Soft Skills */}
                                 <BentoCard className="md:col-span-1 md:row-span-1 flex items-center justify-center p-0">
                                     <div className="grid grid-cols-2 gap-2 w-full h-full p-4">
                                         {['Storytelling', 'Ritmo', 'Comunicação', 'Organização'].map(s => (
